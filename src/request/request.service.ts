@@ -2,7 +2,6 @@ import { Injectable } from '@nestjs/common';
 import { prisma } from 'prisma/instance';
 
 var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-var charactersLength = characters.length;
 
 @Injectable()
 export class RequestService {
@@ -25,7 +24,7 @@ export class RequestService {
         let result: string = '';
 
         for (var i = 0; i < length; i++) {
-            result += characters.charAt(Math.floor(Math.random() * length));
+            result += characters.charAt(Math.floor(Math.random() * characters.length));
         }
 
         return result;

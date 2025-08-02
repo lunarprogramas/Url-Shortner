@@ -19,7 +19,6 @@ export class RequestController {
     }
 
     @Post()
-    @IsPublic(true)
     async addUrlToForwarding(@Req() request: Request, @Res() response: Response) {
         const url = (request.body && request.body['url']) ?? null;
         if (!url) return response.send('Unable to find the provided URL code.');
