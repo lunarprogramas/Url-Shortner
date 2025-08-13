@@ -13,4 +13,5 @@ COPY . .
 EXPOSE 3000
 
 # Run NestJS in dev mode (hot reload with ts-node)
+CMD ["npx", "prisma", "generate"]
 CMD ["npm", "run", "start:dev"]
